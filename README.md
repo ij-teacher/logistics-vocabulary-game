@@ -31,3 +31,8 @@ GitHub Pages：Settings → Pages → Deploy from a branch → main → / (root)
 內容檢查：`node verify.cjs`。更新詞彙後：`python build_resources.py`。QR code 是固定遊戲網址的本機 SVG，學生不需連接第三方 QR code 服務。
 
 成績不持久保存；重新整理會開始新的一次練習。
+
+## 貨箱接接樂
+
+[開始 Catch the Cargo](https://ij-teacher.github.io/logistics-vocabulary-game/catch.html)：看中文，移動貨車接正確英文貨箱。支援鍵盤、觸控、兩種速度、暫停與錯題重練。核心邏輯檢查：node verify-catch.cjs。
+
