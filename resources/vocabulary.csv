@@ -1,0 +1,41 @@
+﻿主題,英文,縮寫,中文,簡單英文解釋
+文件與單據,Air Waybill,AWB,空運提單,A document for goods sent by air.
+文件與單據,Bill of Lading,B/L,海運提單,A transport document for goods sent by sea.
+文件與單據,Commercial Invoice,CI,商業發票,A bill showing the goods and their price.
+文件與單據,Packing List,PL,裝箱單,A list showing what is inside each package.
+文件與單據,Certificate of Origin,C/O,產地證明,A document showing where goods were made.
+文件與單據,Arrival Notice,A/N,到貨通知,A notice that tells you a shipment is arriving.
+文件與單據,Purchase Order,PO,採購訂單,A document a buyer sends to order goods.
+角色與對象,Import / Export,IMP / EXP,進口／出口,Bring goods into a country / send goods to another country.
+角色與對象,Shipper,,發貨人,The person or company sending the goods.
+角色與對象,Consignee,CNEE,收貨人,The person or company named to receive the goods.
+角色與對象,Freight Forwarder,,貨運承攬業者／貨代,A company that arranges the transport of goods.
+角色與對象,Customs Broker,,報關行,A person or company that handles customs documents for others.
+角色與對象,Carrier,,運送人,A company that transports goods.
+角色與對象,Agent,,代理,A person or company acting for another business.
+角色與對象,Vendor / Supplier,,供應商,A person or company that supplies goods.
+報關與運輸,Estimated Time of Departure,ETD,預計起飛／開航時間,The time a plane or ship is expected to leave.
+報關與運輸,Estimated Time of Arrival,ETA,預計抵達時間,The time a plane or ship is expected to arrive.
+報關與運輸,Customs Clearance,,報關／清關,The process of getting goods through customs.
+報關與運輸,Tariff / Duty,,關稅／進出口稅,A tariff is a tax or schedule of rates; duty is the tax charged on goods.
+報關與運輸,HS Code,,國際商品統一分類代碼,A number used to classify goods for international trade.
+報關與運輸,Inspection,,查驗,A check of goods or documents.
+報關與運輸,Release,,放行,Permission to let goods go.
+報關與運輸,Transit / Transshipment,,運送途中／轉運,Transit: goods travel through a place. Transshipment: goods change ships or vehicles.
+報關與運輸,Tracking / Status,,貨物追蹤／狀態,Checking where goods are / information about their current stage.
+操作與計算,Booking,,訂艙,Reserving space for goods on a ship or plane.
+操作與計算,Warehouse,,倉庫,A building where goods are stored.
+操作與計算,Container,FCL / LCL,貨櫃（整櫃／併櫃）,A large transport box. FCL: full container load. LCL: less than container load.
+操作與計算,Consolidation,Consol,併裝／併櫃,Putting several small shipments together.
+操作與計算,Dangerous Goods,DG,危險品,Goods that may cause harm during transport.
+操作與計算,Pallet,,棧板,A flat platform used to hold and move goods.
+操作與計算,Carton,CTN,紙箱,A box made of strong cardboard.
+操作與計算,Gross Weight,G.W.,毛重,The weight of goods plus their packaging.
+操作與計算,Net Weight,N.W.,淨重,The weight of goods without their packaging.
+操作與計算,Volume,CBM,體積／立方公尺,The space goods take up. CBM means cubic metre.
+操作與計算,Chargeable Weight,C.W.,計費重量,The weight used to calculate the transport charge.
+費用與溝通,Incoterms,EXW / FOB / CIF / DDP,國貿條規,"Rules that divide delivery tasks, costs and risks between buyer and seller."
+費用與溝通,Quotation,Quote,報價（單）,A statement of the price offered.
+費用與溝通,Storage / Demurrage,,倉租／貨櫃逾期滯留費,Storage: a fee for keeping goods. Demurrage: a container stays at a terminal beyond free time.
+費用與溝通,Revise / Amendment,,修改／改單,Revise: change something. Amendment: a change to a document.
+費用與溝通,Confirm,,確認,Say that information or an arrangement is correct.
