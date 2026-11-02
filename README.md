@@ -32,7 +32,7 @@ GitHub Pages：Settings → Pages → Deploy from a branch → main → / (root)
 
 成績不持久保存；重新整理會開始新的一次練習。
 
-## 貨箱接接樂
 
-[開始 Catch the Cargo](https://ij-teacher.github.io/logistics-vocabulary-game/catch.html)：看中文，移動貨車接正確英文貨箱。支援鍵盤、觸控、兩種速度、暫停與錯題重練。核心邏輯檢查：node verify-catch.cjs。
+## 物流接接樂
 
+[開始五大分類接物遊戲](https://ij-teacher.github.io/logistics-vocabulary-game/catch.html)：參考會計接接樂，把掉落的英文卡片移到正確分類。支援鍵盤、觸控、立即接住、8/5秒速度、暫停、10/20/40題及錯題重練。核心檢查：node verify-catch.cjs。專屬QR code：assets/catch-qr.svg。
