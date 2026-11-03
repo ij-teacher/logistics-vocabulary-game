@@ -13,7 +13,7 @@ let s=state(alice);assert.equal(s.question.answer,undefined);assert.equal(s.stan
 assert.throws(()=>ctx.liveAnswer(host.code,alice.token,0,0));
 now=s.start;ctx.liveAnswer(host.code,alice.token,0,0);
 ctx.liveAnswer(host.code,alice.token,0,1); // first answer remains final
-now+=19999;ctx.liveAnswer(host.code,bob.token,0,0);
+now+=7999;ctx.liveAnswer(host.code,bob.token,0,0);
 now+=1;assert.throws(()=>ctx.liveAnswer(host.code,alice.token,1,0));
 s=state(alice);assert.equal(s.phase,'reveal');assert.equal(s.me.result.points,1000);
 assert.equal(s.standings.find(x=>x.name==='Bob').score,500);
