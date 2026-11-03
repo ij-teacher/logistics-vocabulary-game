@@ -12,7 +12,7 @@
 - 翻卡學習、雙向詞彙選擇、英文定義、24 題實務情境題庫。
 - 每回合最多 10 題，隨機選項、即時解說、錯題複習。
 - 手機與桌面皆可使用；首頁 QR code 可下載、列印。
-- 不需登入、不收集學生資料。
+- 不需登入；學生可將姓名與成績提交至老師的私人試算表。
 
 ## 教學資源
 
@@ -30,9 +30,9 @@ GitHub Pages：Settings → Pages → Deploy from a branch → main → / (root)
 
 內容檢查：`node verify.cjs`。更新詞彙後：`python build_resources.py`。QR code 是固定遊戲網址的本機 SVG，學生不需連接第三方 QR code 服務。
 
-成績不持久保存；重新整理會開始新的一次練習。
+完成後按「提交姓名＋成績」可保存紀錄；重新整理會清除尚未提交的遊戲進度。
 
 
 ## 物流接接樂
 
-[開始五大分類接物遊戲](https://ij-teacher.github.io/logistics-vocabulary-game/catch.html)：參考會計接接樂，把掉落的英文卡片移到正確分類。支援鍵盤、觸控、立即接住、8/5秒速度、暫停、10/20/40題及錯題重練。核心檢查：node verify-catch.cjs。專屬QR code：assets/catch-qr.svg。
+[開始五大分類接物遊戲](https://ij-teacher.github.io/logistics-vocabulary-game/catch.html)：參考會計接接樂，把掉落的英文卡片移到正確分類。支援鍵盤、觸控、立即接住、固定每題8秒、暫停、固定20題（每類4題、所有同學同題同順序）及錯題重練。核心檢查：node verify-catch.cjs。專屬QR code：assets/catch-qr.svg。
