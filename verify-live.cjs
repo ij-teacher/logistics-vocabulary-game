@@ -10,10 +10,10 @@ assert.throws(()=>ctx.liveState(host.code,'bad'));
 assert.throws(()=>ctx.liveControl(host.code,alice.token,'next',state().revision));
 ctx.liveControl(host.code,host.token,'next',state().revision);
 let s=state(alice);assert.equal(s.question.answer,undefined);assert.equal(s.standings.length,0);
-assert.throws(()=>ctx.liveAnswer(host.code,alice.token,0,0));
+assert.equal(s.start,now); // teacher starts immediately, without countdown
 now=s.start;ctx.liveAnswer(host.code,alice.token,0,0);
 ctx.liveAnswer(host.code,alice.token,0,1); // first answer remains final
-now+=7999;ctx.liveAnswer(host.code,bob.token,0,0);
+now+=5999;ctx.liveAnswer(host.code,bob.token,0,0);
 now+=1;assert.throws(()=>ctx.liveAnswer(host.code,alice.token,1,0));
 s=state(alice);assert.equal(s.phase,'reveal');assert.equal(s.me.result.points,1000);
 assert.equal(s.standings.find(x=>x.name==='Bob').score,500);
