@@ -4,7 +4,9 @@ const fixed=JSON.parse(fs.readFileSync('catch.js','utf8').match(/FIXED_CATCH_IDS
 const terms=VOCABULARY.filter(t=>!fixed.includes(t.id));
 const questions=terms.map((t,i)=>{const other=terms.filter(x=>x.id!==t.id);const choices=[other[(i*3)%other.length].en,other[(i*3+5)%other.length].en,other[(i*3+11)%other.length].en];choices.splice(i%4,0,t.en);return {text:'「'+t.zh+'」的英文是什麼？',choices,answer:i%4,note:t.definition};});
 assert.equal(questions.length,20);
-const html=fs.readFileSync('live-client.html','utf8').replace("'use strict';","'use strict';\nconst LIVE_APP_URL = "+'<?!= JSON.stringify(ScriptApp.getService().getUrl()) ?>'+';');
+const qrLibrary=fs.readFileSync('assets/vendor/qrcode.js','utf8');
+const html=fs.readFileSync('live-client.html','utf8').replace('<!-- QR_LIBRARY -->',()=>'<script>'+qrLibrary+'</script>').replace("'use strict';","'use strict';\nconst LIVE_APP_URL = "+'<?!= JSON.stringify(ScriptApp.getService().getUrl()) ?>'+';');
+for(const match of html.matchAll(/<script>([\s\S]*?)<\/script>/g))new Function(match[1].replace(/<\?!=.*?\?>/g,'"https://example.com"'));
 // A template injects only the app URL; question answers never enter initial HTML.
 let server=fs.readFileSync('live-server.gs','utf8').replace('const LIVE_QUESTIONS = []; // populated by build-live.cjs','const LIVE_QUESTIONS = '+JSON.stringify(questions)+';');
 server=server.replace('HtmlService.createHtmlOutput(LIVE_HTML)','HtmlService.createTemplate(LIVE_HTML).evaluate()');
