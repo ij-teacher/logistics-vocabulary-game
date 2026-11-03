@@ -57,7 +57,7 @@ function liveControl(code,token,action,expectedRevision){return liveLock_(()=>{
     if(!['lobby','reveal'].includes(room.phase))throw Error('請先結束本題。');
     if(room.players.length===0)throw Error('請等至少一位同學加入。');
     if(room.index>=LIVE_QUESTIONS.length-1)throw Error('已是最後一題，請查看總排名。');
-    room.index++;room.phase='question';room.start=Date.now()+4000;room.deadline=room.start+8000;
+    room.index++;room.phase='question';room.start=Date.now();room.deadline=room.start+6000;
   }else if(action==='reveal'){
     if(room.phase!=='question')throw Error('目前沒有進行中的題目。');room.phase='reveal';
   }else if(action==='finish'){
@@ -72,7 +72,7 @@ function liveAnswer(code,token,index,choice){return liveLock_(()=>{
   if(room.phase!=='question'||now<room.start||now>=room.deadline)throw Error('本題尚未開始或已結束。');
   if(!Number.isInteger(choice)||choice<0||choice>3)throw Error('請選擇一個答案。');
   const elapsed=now-room.start,correct=choice===LIVE_QUESTIONS[index].answer;
-  const points=correct?Math.max(500,Math.round(1000-500*elapsed/8000)):0;
+  const points=correct?Math.max(500,Math.round(1000-500*elapsed/6000)):0;
   player.answers[index]={choice,ms:elapsed,points,correct};player.score+=points;
   if(correct){player.correct++;player.totalMs+=elapsed;}
   liveStore_().setProperty('player:'+code+':'+token,JSON.stringify(player));return {ok:true};
